@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    table {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+    animation: slideInFromLeft 0.6s ease-out;
+}
+
+form div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input[type="text"], form input[type="tel"], form input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus, form input[type="tel"]:focus, form input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+form a#cancel {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+form a#cancel:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    width: 900px;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+table thead {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+}
+
+table tbody {
+    display: table-row-group;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+table tbody tr {
+    transition: background-color 0.3s;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+table tbody tr td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+table tbody tr td button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+table tbody tr td .edit {
+    background-color: #ffc107;
+    color: white;
+}
+
+table tbody tr td .deletee {
+    background-color: #dc3545;
+    color: white;
+}
+
+table tbody tr td button:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Auto-collapse table when empty */
+table tbody:empty {
+    display: none;
+}

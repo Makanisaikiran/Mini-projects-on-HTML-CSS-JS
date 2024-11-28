@@ -1,0 +1,229 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #81c784, #4db6ac, #5588af);
+    color: #2c3e50;
+}
+
+#main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header {
+    width:auto;
+    background-color: #295F98;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#BalanceTrack {
+    margin: 10px auto;
+    padding: 20px;
+    width:500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#BalanceTrackTotal {
+    text-align: center;
+    margin-bottom: 0px;
+    animation: fadeIn 1s ease;
+}
+
+#totalBalance {
+    font-size: 26px;
+    font-weight: bold;
+    color: #295F98;
+    transition: color 0.3s ease;
+}
+
+#BalanceTrackIncome, #BalanceTrackExpenses {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#BalanceTrackIncome span {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#BalanceTrackExpenses span {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#TransactionsTrack {
+    margin: 10px auto;
+    padding: 10px;
+    width: 900px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#TransactionsTrack h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+#TransactionsTrackTable {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease;
+}
+
+#TransactionsTrackTable thead {
+    background-color: #295F98;
+    color: white;
+}
+
+#TransactionsTrackTable th,
+#TransactionsTrackTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+td{
+    font-size: large;
+}
+.fa-trash{
+    transition: all 1s ease;
+}
+.fa-trash:hover{
+    color: red;
+}
+
+#TransactionsTrackTable tbody tr:hover {
+    background-color: #e4e3e3;
+    transition: all 1s ease;
+}
+
+#formSection {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formSection form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeInUp 1s ease;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    background-color: #3a3d3a;
+}
+.toggle-button.active {
+    background-color: #FABC3F;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+    transform: scale(1.2);
+}
+
+form label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    border: 1px solid #295F98;
+    outline: none;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #295F98;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3e8e41;
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #34495e;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#BalanceTrackIE{
+    display: flex;
+    justify-content: space-around;
+}
+
+#aa{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #pietrack{
+    width: 500px;
+    height: 500px;
+} */

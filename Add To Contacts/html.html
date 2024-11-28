@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <form action=""  id="form">
+            <div>
+                <label for="fName">First Name: </label>
+                <input type="text" name="fName" id="fName" placeholder="First Name"  title="Enter Valied First Name" required>
+            </div>
+            <br>
+            <div>
+                <label for="lName">Last Name: </label>
+                <input type="text" name="lName" id="lName" placeholder="Last Name"  title="Enter Valied First Name" required>
+            </div>
+            <br>
+            <div>
+                <label for="pNumber">Mobile Number: </label>
+                <input type="tel" name="pNumber" id="pNumber" placeholder="000-000-0000" title="Ensure that Mobile number Should be in this Manner 000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email"  name="email" id="email" placeholder="Email" required>
+            </div>
+            <br>
+            <div>
+                <button type="submit"></button>
+            </div>
+            <br>
+            
+        </form>
+        <table id="table" border="1" cellspacing="0" cellpadding="10px">
+            <thead>
+              <tr>
+                <td id="NAME">NAME</td>
+                <td id="MOBILENUMBER">MOBILE NUMBER</td>
+                <td id="EMAIL">EMAIL</td>
+                <td>EDIT</td>
+                <td>DELETE</td>
+              </tr>
+            </thead>
+            <tbody id="tablebody">
+    
+            </tbody>
+          </table>
+    </div>
+
+      <script src="js.js"></script>
+</body>
+</html>

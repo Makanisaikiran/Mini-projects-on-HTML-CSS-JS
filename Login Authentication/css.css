@@ -1,0 +1,122 @@
+/* Style for the entire page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #81c784, #4db6ac);
+}
+
+/* Form Container */
+form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+form:hover {
+  transform: scale(1.02);
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #4db6ac;
+  outline: none;
+  box-shadow: 0 0 8px rgba(77, 182, 172, 0.3);
+}
+
+/* Label style */
+label {
+  font-weight: bold;
+  color: #4db6ac;
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+}
+
+/* Submit Button */
+button {
+  background-color: #4db6ac;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e7b;
+  transform: translateY(-3px);
+}
+
+/* Error message */
+#p {
+  color: #d32f2f;
+  font-size: 14px;
+  font-style: italic;
+  margin: 10px 0;
+  transition: opacity 0.3s ease;
+}
+
+#p.active {
+  opacity: 1;
+}
+
+/* Sign-Up Button */
+#signUpButton {
+  background-color: #515199;
+  color: #fff;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+
+#signUpButton:hover {
+  background-color: #4b4b6a;
+  transform: translateY(-3px);
+}
+
+/* Animation for form appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  animation: fadeIn 0.5s ease;
+}

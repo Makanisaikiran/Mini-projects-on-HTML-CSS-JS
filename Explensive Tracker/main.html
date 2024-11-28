@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  </head>
+  <body>
+    <header>Expensive Tracker</header>
+    <section id="main">
+      <section id="left-section">
+        <section id="BalanceTrack">
+          <div id="BalanceTrackTotal">
+            <h2>Total Balance</h2>
+            <span id="totalBalance">0</span>
+          </div>
+          <div id="BalanceTrackIE">
+            <div id="BalanceTrackIncome">
+              <h2>Income</h2>
+              <span id="totalIncome" style="color: green; font-size: 26px"
+                >0</span
+              >
+            </div>
+            <div id="BalanceTrackExpenses">
+              <h2>Expenses</h2>
+              <span id="totalExpenses" style="color: red; font-size: 26px"
+                >0</span
+              >
+            </div>
+          </div>
+        </section>
+        <section id="formSection">
+          <form action="" id="form" onsubmit="submitTransaction(event)">
+            <div>
+              <span id="typeSelect">Select Type: </span>
+              <span onclick="darkI()" id="darkIncome" class="toggle-button"
+                >Income</span
+              >
+              <span onclick="darkE()" id="darkExpenses" class="toggle-button"
+                >Expenses</span
+              >
+            </div>
+            <div>
+              <label for="transactionName">Reason:</label><br />
+              <input type="text" id="transactionName" required />
+            </div>
+            <div>
+              <label for="transactionAmount">Amount:</label><br />
+              <input type="number" id="transactionAmount" required />
+            </div>
+            <div>
+              <label for="transactionDate">Date:</label><br />
+              <input type="date" id="transactionDate" required />
+            </div>
+            <div>
+              <button type="submit">Add Transaction</button>
+            </div>
+          </form>
+        </section>
+      </section>
+      <section id="right-section">
+        <section id="TransactionsTrack">
+          <div id="TransactionsTrackdiv">
+            <h2>Transactions</h2>
+            <table cellspacing="0" cellpadding="0" id="TransactionsTrackTable">
+              <thead>
+                <tr>
+                  <th>Reason</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="history">
+                
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="pietrack">
+          <div id="myDiv">
+            
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <footer></footer>
+    <script src="main.js"></script>
+  </body>
+</html>
